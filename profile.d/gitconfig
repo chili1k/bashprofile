@@ -1,0 +1,51 @@
+#
+# git-config(1)
+#
+
+[color]
+  diff = auto
+	ui = true
+
+[user]
+  # change this
+  # name = Joe Average
+  # email = joe.average@example.org
+
+[alias]
+  switch = !legit switch \"$@\"
+  branches = !legit branches
+  sprout = !legit sprout \"$@\"
+  unpublish = !legit unpublish \"$@\"
+  harvest = !legit harvest \"$@\"
+  sync = !legit sync \"$@\"
+  publish = !legit publish \"$@\"
+  graft = !legit graft \"$@\"
+  cl = clone
+  ci = commit
+  co = checkout
+  st = status
+  s = status -sb
+  glog = log --all --pretty='format:%d %Cgreen%h%Creset %an - %s' --graph
+  rev = merge --no-ff --no-commit
+  br = branch
+  ls = ls-files
+  add = add -v
+  tagd =  for-each-ref --format=\"%(taggerdate): %(refname)\" --sort=-taggerdate --count=20 refs/tags
+  cb = checkout -b
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  save = !git add -A && git commit -m 'SAVEPOINT'
+  wip = commit -am "WIP" 
+  up = pull --rebase --prune
+  cob = checkout -b
+  cm = !git add -A && git commit -m
+  amend = commit -a --amend
+  undo = reset HEAD~1 --mixed
+  wipe = !git add -A && git commit -qm 'WIPE SAVEPOINT' && git reset HEAD~1 --hard
+  bclean = "!f() { git branch --merged ${1-master} | grep -v \"${1-master}$\" | xargs git branch -d; }; f"
+  bdone = "!f() { git co ${1} && git rebase master && git co master && git merge ${1} && git bclean master; }; f"
+  # gitflow
+  fs = flow feature start
+  ff = flow feature finish
+
+[push]
+  default = matching
