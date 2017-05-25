@@ -12,5 +12,5 @@ sudo apt-get install -y net-tools htop netcat telnet tmux dnsutils whois tcpdump
 echo "Configuring vim"
 cat <<EOF >> ~/.vimrc
 syntax on
-colorscheme peachpuff
+colorscheme desert
 EOF
