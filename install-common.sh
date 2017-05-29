@@ -13,4 +13,14 @@ echo "Configuring vim"
 cat <<EOF >> ~/.vimrc
 syntax on
 colorscheme desert
+
+set tabstop=2
+set shiftwidth=2
+set expandtab
+
+"Move by display line, not real line (wrapping behavior)
+map j gj
+map k gk
+map <up> gk
+map <down> gj
 EOF
