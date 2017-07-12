@@ -37,3 +37,8 @@ map k gk
 map <up> gk
 map <down> gj
 EOF
+
+echo "Configuring gvim"
+cat <<EOF >> ~/.gvimrc
+set guifont=Menlo\ Regular:h14
+EOF
