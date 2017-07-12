@@ -14,7 +14,13 @@ export PS1="\w \033[0;32m\$(git_branch_prompt)\033[0m[\A]$ "
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias grep='grep --color=auto'
-#alias ls='ls --color=auto'
+
+if [ "$os" == "Darwin" ]; then
+  alias ls='ls -G'
+else
+  alias ls='ls --color=auto'
+fi
+
 alias l='ls -CF'
 alias la='ls -A'
 alias ll='ls -alhF'
