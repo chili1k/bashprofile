@@ -8,7 +8,7 @@ git_branch_prompt() {
   test -n "$branch" && echo "($branch) "
 }
 
-export PS1="\w \033[0;32m\$(git_branch_prompt)\033[0m[\A]$ "
+#export PS1="\w \033[0;32m\$(git_branch_prompt)\033[0m[\A]$ "
 
 # Aliases
 alias egrep='egrep --color=auto'
