@@ -25,6 +25,7 @@ alias l='ls -CF'
 alias la='ls -A'
 alias ll='ls -alhF'
 alias ..='cd ..'
+alias head='head -n 20'
 alias ports='netstat -tulanp'
 alias guid="uuidgen | tr '[:upper:]' '[:lower:]'"
 
