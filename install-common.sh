@@ -12,10 +12,13 @@ cp profile.d/userprofile.sh ~/.bash_profile
 if [ "$os" == "Linux" ]; then 
   echo "Linux detected"
   echo "Installing common software"
-  sudo apt-get install -y net-tools htop netcat telnet tmux dnsutils whois tcpdump lftp httpie
+  sudo apt-get install -y net-tools htop netcat telnet tmux dnsutils whois tcpdump lftp httpie jq
 fi
 
 #sudo apt-get install openjdk-8-jdk
+
+# add docker privileges
+#sudo usermod -aG docker $USER
 
 if [ "$os" == "Darwin" ]; then
 	echo "macOS detected"
