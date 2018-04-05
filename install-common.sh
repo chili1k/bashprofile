@@ -34,6 +34,7 @@ set autoindent
 set tabstop=2
 set shiftwidth=2
 set expandtab
+set hlsearch
 EOF
 
 echo "Configuring gvim"
