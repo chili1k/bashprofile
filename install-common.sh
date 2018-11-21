@@ -12,7 +12,8 @@ cp profile.d/userprofile.sh ~/.bash_profile
 if [ "$os" == "Linux" ]; then 
   echo "Linux detected"
   echo "Installing common software"
-  sudo apt-get install -y net-tools htop netcat telnet tmux dnsutils whois tcpdump lftp httpie jq python-pip
+  sudo apt-get update && \
+    sudo apt-get install -y net-tools htop netcat telnet tmux dnsutils whois tcpdump lftp httpie jq python-pip
 fi
 
 #sudo apt-get install openjdk-8-jdk
