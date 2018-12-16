@@ -31,6 +31,9 @@ cat <<EOF >> ~/.vimrc
 syntax on
 colorscheme desert
 
+" Directory always at current file.
+set autochdir
+
 set autoindent
 set tabstop=2
 set shiftwidth=2
