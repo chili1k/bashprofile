@@ -12,7 +12,7 @@ import ssl
 
 httpd = BaseHTTPServer.HTTPServer(('0.0.0.0', 4443), SimpleHTTPServer.SimpleHTTPRequestHandler)
 httpd.socket = ssl.wrap_socket (httpd.socket, certfile='$SERVERCERT', server_side=True)
-print "Started server on 4443"
+print("Started server on 4443")
 httpd.serve_forever()
 EOF
 
