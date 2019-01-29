@@ -48,4 +48,4 @@
   ff = flow feature finish
 
 [push]
-  default = matching
+  default = simple
