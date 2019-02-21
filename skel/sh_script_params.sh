@@ -1,6 +1,7 @@
 #!/bin/bash
 
 my_dir="$(dirname "$0")"
+my_name=$(basename "$0")
 
 die() {
   echo "[EXIT] $@" 1>&2
@@ -9,7 +10,7 @@ die() {
 
 printusage() {
   cat <<EOF
-Usage: script.sh
+Usage: ${my_name}
 
 This is how you use this script.
 
@@ -36,7 +37,7 @@ case $key in
   PARAM=$2
   ;;
    -h|--help)
-  printusage 
+  printusage
   exit 0
   ;;
   *)
