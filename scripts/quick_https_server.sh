@@ -6,7 +6,7 @@ openssl req -x509 -newkey rsa:2048 -keyout key.pem -out $SERVERCERT -days 365 -n
 cat key.pem >> $SERVERCERT
 rm key.pem
 
-cat <<EOF | python
+cat <<EOF | python2
 import BaseHTTPServer, SimpleHTTPServer
 import ssl
 
