@@ -1,7 +1,7 @@
 #!/bin/bash
 
-my_dir="$(dirname "$0")"
-my_name=$(basename "$0")
+MY_DIR="$(dirname "$0")"
+MY_NAME=$(basename "$0")
 
 die() {
   echo "[EXIT] $@" 1>&2
@@ -10,7 +10,7 @@ die() {
 
 printusage() {
   cat <<EOF
-Usage: ${my_name}
+Usage: ${MY_NAME}
 
 This is how you use this script.
 
