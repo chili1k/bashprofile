@@ -32,7 +32,7 @@
   add = add -v
   tagd =  for-each-ref --format=\"%(taggerdate): %(refname)\" --sort=-taggerdate --count=20 refs/tags
   cb = checkout -b
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   save = !git add -A && git commit -m 'SAVEPOINT'
   wip = commit -am "WIP" 
   up = pull --rebase --prune
